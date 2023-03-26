@@ -1,7 +1,7 @@
 export const isPalindrome = (str: string): boolean => {
   if (typeof str != 'string' || !str) return false;
 
-  const input = str.toLowerCase();
+  const input = str.toLowerCase().replace(/\s/g, '');
 
   const halfOfString = input.length / 2;
   const lastCharIndex = input.length - 1;
