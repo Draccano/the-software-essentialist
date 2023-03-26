@@ -1,10 +1,12 @@
 export const isPalindrome = (str: string): boolean => {
   if (typeof str != 'string' || !str) return false;
 
-  const halfOfString = str.length / 2;
-  const lastCharIndex = str.length - 1;
+  const input = str.toLowerCase();
+
+  const halfOfString = input.length / 2;
+  const lastCharIndex = input.length - 1;
   for (let i = 0; i < halfOfString; i++) {
-    if (str[i] !== str[lastCharIndex - i]) {
+    if (input[i] !== input[lastCharIndex - i]) {
       return false;
     }
   }
